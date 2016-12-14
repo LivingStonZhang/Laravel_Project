@@ -86,38 +86,37 @@
                     </ul>
                 </div>
                 <div class="menu_latest" id="menu_latest" style="min-height:700px;">
-                    @foreach ($articles as $article)
-                        <div class="news-list">
-                            <div class="row">
-                                <div class="col-sm-2 col-xs-5 newslist_img">
-                                    <a href="/article/2016/11/04/1094/olivet-university-zsds-annual-doctoral-colloquium-kicks-off-in-riverside.htm"><img  class="img-responsive" src="{{ $article->image_address }}" alt=""></a>
-                                </div>
-                                <div class="col-sm-8 col-xs-7  newslist_text">
-                                    <a class="category category_theology" href="javascript:void(0)"><span> {{ $article->sections }} </span></a>
-                                    <div class="">
-                                        <h3><a href="/article/2016/11/04/1094/olivet-university-zsds-annual-doctoral-colloquium-kicks-off-in-riverside.htm">{{ $article->title }}</a></h3>
-                                        <span class="news_date">{{ $article->publish_date }}</span>
-                                        <p>{{ $article->body }}</p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2 lable_tag">
+                    @foreach ($articles as $key=>$article)
+                    <div class="news-list">
+                        <div class="row">
+                            <div class="col-sm-2 col-xs-5 newslist_img">
+                                <a href="/article/2016/11/04/1094/olivet-university-zsds-annual-doctoral-colloquium-kicks-off-in-riverside.htm"><img  class="img-responsive" src="{{ $article->image_address }}" alt=""></a>
+                            </div>
+                            <div class="col-sm-8 col-xs-7  newslist_text">
+                                <a class="category category_theology" href="javascript:void(0)"><span> {{ $article->sections }} </span></a>
+                                <div class="">
+                                    <h3><a href="/article/2016/11/04/1094/olivet-university-zsds-annual-doctoral-colloquium-kicks-off-in-riverside.htm">{{ $article->title }}</a></h3>
+                                    <span class="news_date">{{ $article->publish_date }}</span>
+                                    <p>{{ $article->body }}</p>
                                 </div>
                             </div>
+                            <div class="col-sm-2 lable_tag">
+                            </div>
                         </div>
+                    </div>
                     @endforeach
 
                     <div class="next load_more"><a href="/jquery-loadmore">Load More ...</a></div>
 
-                        {{--@yield('content')--}}
+                    {{--@yield('content')--}}
 
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Content End -->
+    <!-- Content End -->
 
 </body>
 </html>
-
-
-
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help

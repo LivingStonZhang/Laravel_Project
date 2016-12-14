@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Article;
 use App\Http\Requests;
-
 class ArticleController extends Controller
 {
     /**
@@ -16,19 +13,19 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::all();
+//        $headline =
+//            Article::where('customer.name', 'LIKE', "%$findcustomer%")->firstOrFail();
         return view('news.main', [
             'articles' => $articles,
         ]);
     }
-
-    public function section()
+    public function section($sections)
     {
-        $articles = Article::all();
+        $articles = Article::where('sections', 'LIKE', "%$sections%")->get();
         return view('news.section', [
             'articles' => $articles,
         ]);
     }
-
     public function loadMore(Request $request){
         $articles=Article::paginate(5);
         $html='';
@@ -40,10 +37,9 @@ class ArticleController extends Controller
         }
         return view('news.main',compact('articles'));
     }
-
     public function article()
     {
-        $article = Article::find(1);
+        $article = Article::find(30);
         return view('news.article', [
             'article' => $article,
         ]);
@@ -57,7 +53,6 @@ class ArticleController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -68,7 +63,6 @@ class ArticleController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *
@@ -79,7 +73,6 @@ class ArticleController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -90,7 +83,6 @@ class ArticleController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -102,7 +94,6 @@ class ArticleController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *

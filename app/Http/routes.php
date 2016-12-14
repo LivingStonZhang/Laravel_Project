@@ -14,14 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix' => 'news'],function (){
+    Route::get('/','ArticleController@index');
+    Route::get('/sections/{section}','ArticleController@section');
+    Route::get('/article','ArticleController@article');
+    Route::get('/jquery-loadmore',['as'=>'jquery-loadmore','uses'=>'ArticleController@loadMore']);
+});
 
 Route::auth();
 
 Route::group(['middleware' => ['auth']], function() {
 
-    Route::get('/home', 'HomeController@index');
-
-    Route::resource('users','UserController');
     /**
      * Role Permission
      */
