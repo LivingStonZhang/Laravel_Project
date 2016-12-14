@@ -21,7 +21,7 @@
             </ul>
         </div>
     @endif
-    {!! Form::open(array('route' => 'articleCRUD.store','method'=>'POST')) !!}
+    {!! Form::open(array('route' => 'articleCRUD.store','enctype'=>"multipart/form-data",'method'=>'POST')) !!}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
@@ -50,7 +50,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Sections:</strong>
-                {!! Form::select('sections', array('otcs' => 'Theology', 'jcm' => 'Music','oacd' => 'Arts & Design', 'ocj' => 'Journalism','ocit' => 'Engineering/IT', 'lan' => 'Language Education','ocb' => 'Business'), null, array('multiple' => true,'class' => 'form-control')) !!}
+                {!! Form::select('sections[]', array('otcs' => 'Theology', 'jcm' => 'Music','oacd' => 'Arts & Design', 'ocj' => 'Journalism','ocit' => 'Engineering/IT', 'lan' => 'Language Education','ocb' => 'Business'), null, array('multiple' => true,'class' => 'form-control')) !!}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -68,7 +68,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Editor:</strong>
-                {!! Form::text('editor', null, array('placeholder' => 'Editor','class' => 'form-control')) !!}
+                {!! Form::text('editor', Auth::user() -> name, array('placeholder' => Auth::user() -> name,'class' => 'form-control')) !!}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
