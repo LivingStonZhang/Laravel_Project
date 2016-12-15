@@ -39,7 +39,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Image:</strong>
-              <img src="{{ $article->image }}" width="200px">
+
+              <img src="<?= WEBSIDE ?>/images/photo/{{$item->image}}" width="200px">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

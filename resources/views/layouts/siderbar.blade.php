@@ -15,7 +15,7 @@
                                 onkeyup="if(event.keyCode==13)topsearch.submit(); "
                                 onfocus="document.getElementById('q').value=''" id="q" value=""  />
                     </form>
-                    
+
                     <div class="menu_section">
                         <h2>SECTIONS</h2>
                         <ul>

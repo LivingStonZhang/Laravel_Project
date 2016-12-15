@@ -117,10 +117,8 @@ class ArticleCRUDController extends Controller
         $article->body = $request->input('body');
         $article->summary = $request->input('summary');
         $article->publish_date = $request->input('publish_date');
-
         $section = $request->input('sections');
         $article->sections = implode(',',$section);
-
         $article->image_address = $request->input('image_address');
         $article->editor = $request->input('editor');
         $article->save();

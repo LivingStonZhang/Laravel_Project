@@ -28,10 +28,10 @@
             </div>
 
         </div>
-        <div id="logo"> <a class="navbar-brand" href="/"><img src="{{asset('images/logo_news.png')}}" alt="logo"></a>
+        <div id="logo"> <a class="navbar-brand" href="<?= WEBSIDE?>news/"><img src="{{asset('images/logo_news.png')}}" alt="logo"></a>
         </div>
         <div class="gohome pull-right">
-            <a href="http://olivetuniversity.edu"><img src="{{asset('images/logo_ou.png')}}" alt=""><span>Home</span></a>
+            <a href="<?= WEBSIDE?>news/"><img src="{{asset('images/logo_ou.png')}}" alt=""><span>Home</span></a>
         </div></div>
 </div>
 <!-- Header End -->

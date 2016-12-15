@@ -39,13 +39,13 @@
 
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                    <img src="{{$article->image_address}}" alt="">
+                                    <img src="<?= WEBSIDE ?>/images/photo/{{$article->image}}" alt="">
                                 </div>
                                 <div class="item">
-                                    <img src="{{$article->image_address}}" alt="">
+                                    <img src="<?= WEBSIDE ?>/images/photo/{{$article->image}}" alt="">
                                 </div>
                                 <div class="item">
-                                    <img src="{{$article->image_address}}" alt="">
+                                    <img src="<?= WEBSIDE ?>/images/photo/{{$article->image}}" alt="">
                                 </div>
                             </div>
 

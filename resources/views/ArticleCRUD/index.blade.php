@@ -39,7 +39,7 @@
                     <td>{{ $item->summary }}</td>
                     <td>{{ $item->publish_date }}</td>
                     <td>{{ $item->sections }}</td>
-                    <td><img width="150px" src="{{ $item->image_address }}" alt="{{ $item->image_address }}"></td>
+                    <td><img width="150px" src="<?= WEBSIDE ?>/images/photo/{{$item->image}}" alt="{{ $item->image_address }}"></td>
                     <td>{{ ($item->editor) }}</td>
                     <td>
                         <a class="btn btn-info" href="{{ route('articleCRUD.show',$item->id) }}">Show</a>

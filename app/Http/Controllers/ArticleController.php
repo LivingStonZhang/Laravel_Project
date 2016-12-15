@@ -22,8 +22,10 @@ class ArticleController extends Controller
     public function section($sections)
     {
         $articles = Article::where('sections', 'LIKE', "%$sections%")->get();
+
         return view('news.section', [
             'articles' => $articles,
+            'section' => $sections
         ]);
     }
     public function loadMore(Request $request){
@@ -37,9 +39,9 @@ class ArticleController extends Controller
         }
         return view('news.main',compact('articles'));
     }
-    public function article()
+    public function article($id)
     {
-        $article = Article::find(30);
+        $article = Article::find($id);
         return view('news.article', [
             'article' => $article,
         ]);
