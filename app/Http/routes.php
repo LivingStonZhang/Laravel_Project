@@ -19,13 +19,10 @@ Route::group(['prefix' => 'news'],function (){
     Route::get('/','ArticleController@index');
     Route::get('/sections/{section}','ArticleController@section');
     Route::get('/article/{id}','ArticleController@article');
-    Route::get('/jquery-loadmore',['as'=>'jquery-loadmore','uses'=>'ArticleController@loadMore']);
+//    Route::get('/jquery-loadmore',['as'=>'jquery-loadmore','uses'=>'ArticleController@loadMore']);
 });
-
 Route::auth();
-
 Route::group(['middleware' => ['auth']], function() {
-
     /**
      * Role Permission
      */
@@ -58,7 +55,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::patch('articleCRUD/{id}',['as'=>'articleCRUD.update','uses'=>'ArticleCRUDController@update','middleware' => ['permission:article-edit']]);
     Route::delete('articleCRUD/{id}',['as'=>'articleCRUD.destroy','uses'=>'ArticleCRUDController@destroy','middleware' => ['permission:article-delete']]);
     /**
-     * Item Permission
+     * Section Permission
      */
     Route::get('itemCRUD2',['as'=>'itemCRUD2.index','uses'=>'ItemCRUD2Controller@index','middleware' => ['permission:item-list|item-create|item-edit|item-delete']]);
     Route::get('itemCRUD2/create',['as'=>'itemCRUD2.create','uses'=>'ItemCRUD2Controller@create','middleware' => ['permission:item-create']]);

@@ -37,7 +37,7 @@
                                     <span>{{$article -> sections}}</span>
                                 </a>
                                 <div class="">
-                                    <h3><a href="<?= WEBSIDE?>news/article/{{ $article -> id }}">{{$article -> title}}</a></h3>
+                                    <h3><a href="<?= WEBSIDE?>/news/article/{{ $article -> id }}">{{$article -> title}}</a></h3>
                                     <span class="headline_datetime">{{$article -> publish_date}}</span>
                                     <p>{{$article -> summary}}</p>
                                 </div>
@@ -48,7 +48,7 @@
                           @if($key > 0 && $key <3)
                             <div class="col-sm-4 vice_news">
                                 <div class=" topnews_img">
-                                    <a href="<?= WEBSIDE?>news/article/{{ $article -> id }}">
+                                    <a href="<?= WEBSIDE?>/news/article/{{ $article -> id }}">
                                         <img src="<?= WEBSIDE ?>/images/photo/{{$article->image}}" class="img-responsive">
                                     </a>
                                 </div>
@@ -56,7 +56,7 @@
                                     <span>{{$article -> sections}}</span>
                                 </a>
                                 <div class="">
-                                    <h3><a href="<?= WEBSIDE?>news/article/{{ $article -> id }}">{{$article -> title}}</a></h3>
+                                    <h3><a href="<?= WEBSIDE?>/news/article/{{ $article -> id }}">{{$article -> title}}</a></h3>
                                     <span class="headline_datetime">{{$article -> publish_date}}</span>
                                     <p>{{$article -> summary}}</p>
                                 </div>

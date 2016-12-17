@@ -1,6 +1,6 @@
 <div class="col-sm-4  vice_news1">
 
-    <h5 class="head_titt">Events / Calendar</h5>
+    <h5 class="head_titt">Calendar</h5>
     <ul class="m_calendar">
         <li class="m_calendarlist">
             <div class="media-left">

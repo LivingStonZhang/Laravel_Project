@@ -34,7 +34,7 @@ $section_full_array = array('otcs' => 'Theology', 'jcm' => 'Music','ocad' => 'Ar
                             @foreach($articles as $key => $article)
                                     <div class="col-sm-6">
                                         <div class=" topnews_img">
-                                            <a href="<?= WEBSIDE?>news/article/{{ $article -> id }}">
+                                            <a href="<?= WEBSIDE?>/news/article/{{ $article -> id }}">
                                                 <img src="<?= WEBSIDE ?>/images/photo/{{$article->image}}" class="img-responsive">
                                             </a>
                                         </div>
@@ -42,7 +42,7 @@ $section_full_array = array('otcs' => 'Theology', 'jcm' => 'Music','ocad' => 'Ar
                                             <span><?= $section_full_array[$section]?></span>
                                         </a>
                                         <div class="">
-                                            <h3><a href="<?= WEBSIDE?>news/article/{{ $article -> id }}">
+                                            <h3><a href="<?= WEBSIDE?>/news/article/{{ $article -> id }}">
                                                     {{$article -> title}}
                                                 </a></h3>
                                             <span class="headline_datetime">{{$article -> publish_date}}</span>
