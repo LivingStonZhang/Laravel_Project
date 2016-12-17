@@ -4,11 +4,11 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Items CRUD</h2>
+                <h2>SECTION</h2>
             </div>
             <div class="pull-right">
                 @permission('item-create')
-                <a class="btn btn-success" href="{{ route('itemCRUD2.create') }}"> Create New Item</a>
+                <a class="btn btn-success" href="{{ route('itemCRUD2.create') }}"> Create New Section</a>
                 @endpermission
             </div>
         </div>

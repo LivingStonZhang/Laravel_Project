@@ -22,7 +22,6 @@ class ArticleController extends Controller
     public function section($sections)
     {
         $articles = Article::where('sections', 'LIKE', "%$sections%")->get();
-
         return view('news.section', [
             'articles' => $articles,
             'section' => $sections
