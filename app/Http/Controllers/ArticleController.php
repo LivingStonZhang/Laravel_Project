@@ -28,6 +28,9 @@ class ArticleController extends Controller
             'section' => $sections
         ]);
     }
+    public function section_more($sections){
+        return $articles = Article::where('sections', 'LIKE', "%$sections%")->get();
+    }
     public function loadMore(Request $request){
         $articles=Article::paginate(5);
         $html='';

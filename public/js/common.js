@@ -76,15 +76,19 @@ $(function()
 
     //$('.menu_latest').jscroll({autoTrigger: false});
     $('.menu_latest').jscroll({debug:true,autoTriggerUntil:3});
-
     $('ul.nav-tabs li a').click(function()
     {
         $('ul.nav-tabs li a').removeClass('current');
         $(this).addClass('current');
-
+        $(".menu_latest").hide()
+        var url = $(this).attr("href")
+        $(url).show()
         //console.log(($section ? '/load_more_section_gd/' + $section+'/' : '/load_more_gd/') + $(this).attr('data-type') + '/1/' + $used_ids + '.htm');
 
-        $('.menu_latest').empty().load(($section ? '/load_more_section_gd/' + $section+'/' : '/load_more_gd/') + $(this).attr('data-type') + '/1/' + $used_ids + '.htm');
+        // $('.menu_latest').empty().load(($section ? '/load_more_section_gd/' + $section+'/' : '/load_more_gd/') + $(this).attr('data-type') + '/1/' + $used_ids + '.htm');
+        // console.log(section_more($section));
+        // console.log("12321321312");
+        // $('.menu_latest').empty().load();
 
         //$('html, body').animate({scrollTop: $("#menu_latest").offset().top-400}, 500);
 

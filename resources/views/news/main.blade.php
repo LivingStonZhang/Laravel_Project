@@ -29,7 +29,7 @@
                             @if($key == 0)
                             <div class="col-sm-8">
                                 <div class=" topnews_img">
-                                    <a href="<?= WEBSIDE?>news/article/{{ $article -> id }}">
+                                    <a href="<?= WEBSIDE?>/news/article/{{ $article -> id }}">
                                         <img src="<?= WEBSIDE ?>/images/photo/{{$article->image}}" class="img-responsive" alt="">
                                     </a>
                                 </div>
@@ -49,7 +49,7 @@
                             <div class="col-sm-4 vice_news">
                                 <div class=" topnews_img">
                                     <a href="<?= WEBSIDE?>news/article/{{ $article -> id }}">
-                                        <img src="<?= WEBSIDE ?>/images/photo/{{$article->image}}" class="img-responsive" alt="">
+                                        <img src="<?= WEBSIDE ?>/images/photo/{{$article->image}}" class="img-responsive">
                                     </a>
                                 </div>
                                 <a class="category category_artd" href="<?= WEBSIDE?>news/sections/">
